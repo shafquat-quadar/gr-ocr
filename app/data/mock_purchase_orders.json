@@ -1,0 +1,85 @@
+{
+  "purchase_orders": [
+    {
+      "purchase_order": "4500166595",
+      "supplier": "SUPPLIER-1001",
+      "company_code": "1000",
+      "items": [
+        {
+          "purchase_order_item": "00010",
+          "material": "MAT-100001",
+          "description": "PRESSURE SENSOR ASSEMBLY",
+          "plant": "1010",
+          "storage_location": "0001",
+          "order_quantity": 100,
+          "received_quantity": 60,
+          "open_quantity": 40,
+          "unit": "EA",
+          "batch_required": true,
+          "serial_required": false,
+          "deleted": false,
+          "delivery_completed": false
+        }
+      ]
+    },
+    {
+      "purchase_order": "4500166596",
+      "supplier": "SUPPLIER-2001",
+      "company_code": "1000",
+      "items": [
+        {
+          "purchase_order_item": "00010",
+          "material": "MAT-200001",
+          "description": "CONTROL VALVE ASSEMBLY",
+          "plant": "1010",
+          "storage_location": "0001",
+          "order_quantity": 50,
+          "received_quantity": 10,
+          "open_quantity": 40,
+          "unit": "EA",
+          "batch_required": false,
+          "serial_required": false,
+          "deleted": false,
+          "delivery_completed": false
+        },
+        {
+          "purchase_order_item": "00020",
+          "material": "MAT-200002",
+          "description": "PRESSURE GAUGE",
+          "plant": "1010",
+          "storage_location": "0001",
+          "order_quantity": 30,
+          "received_quantity": 0,
+          "open_quantity": 30,
+          "unit": "EA",
+          "batch_required": false,
+          "serial_required": false,
+          "deleted": false,
+          "delivery_completed": false
+        }
+      ]
+    },
+    {
+      "purchase_order": "4500166597",
+      "supplier": "SUPPLIER-3001",
+      "company_code": "1000",
+      "items": [
+        {
+          "purchase_order_item": "00010",
+          "material": "MAT-300001",
+          "description": "SERIALIZED FLOW METER",
+          "plant": "1010",
+          "storage_location": "0001",
+          "order_quantity": 5,
+          "received_quantity": 0,
+          "open_quantity": 5,
+          "unit": "EA",
+          "batch_required": false,
+          "serial_required": true,
+          "deleted": false,
+          "delivery_completed": false
+        }
+      ]
+    }
+  ]
+}
