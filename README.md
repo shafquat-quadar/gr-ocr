@@ -200,6 +200,70 @@ Expected: `NEEDS_CORRECTION`, `can_post=false`, error `SERIAL_COUNT_MISMATCH`
 
 ---
 
+---
+
+## Frontend SPA
+
+A React + Vite + TypeScript SPA lives in the `frontend/` folder. It provides a full UI for the GR Agent POC workflow.
+
+**No backend logic was modified.** The frontend only calls existing API endpoints.
+
+### Prerequisites
+
+- Node.js 18+
+- npm
+
+### Setup & Run
+
+```bash
+cd frontend
+cp .env.example .env   # defaults to http://localhost:8000
+npm install
+npm run dev
+```
+
+Open: http://localhost:5173
+
+The backend must be running at http://localhost:8000 before using the frontend.
+
+### Build (production)
+
+```bash
+cd frontend
+npm run build
+npm run preview
+```
+
+### API Base URL
+
+Configured via `VITE_API_BASE_URL` in `frontend/.env`:
+
+```
+VITE_API_BASE_URL=http://localhost:8000
+```
+
+If this variable is missing, the frontend defaults to `http://localhost:8000`.
+
+### CORS
+
+If the backend rejects requests from `http://localhost:5173`, add that origin to the backend's CORS allow-list (e.g. `CORS_ORIGINS` in the backend config or via `CORSMiddleware` in `app/main.py`). The backend code itself was not modified.
+
+### Local Session Reporting
+
+The Dashboard, Exceptions, Posted Documents, and Reports pages are built from drafts tracked in `localStorage` (`gr-agent.localDrafts`). The backend does not expose global list/report endpoints, so only drafts created from the current browser are visible. This is clearly labelled in the UI.
+
+### Docker Compose (optional)
+
+A `gr-agent-frontend` service is defined in `docker-compose.yml`. Start both backend and frontend with:
+
+```bash
+docker compose up --build
+```
+
+Frontend will be available at http://localhost:5173.
+
+---
+
 ## Running Tests
 
 ```bash

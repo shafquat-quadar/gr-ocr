@@ -1,0 +1,1 @@
+export { sapPing } from './grApi'
